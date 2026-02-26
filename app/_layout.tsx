@@ -3,8 +3,10 @@ import { Stack } from 'expo-router';
 export default function RootLayout() {
     return (
         <Stack>
-            {/* Mengatur halaman "index" agar header/judul atasnya tidak muncul */}
+            {/* Halaman Login */}
             <Stack.Screen name="index" options={{ headerShown: false }} />
+            {/* Halaman Tab Navigation (Home, dll) */}
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
     );
 }
