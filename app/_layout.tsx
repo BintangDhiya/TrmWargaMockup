@@ -9,6 +9,7 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             {/* Halaman Detail Billing */}
             <Stack.Screen name="billing-detail" options={{ headerShown: false }} />
+            <Stack.Screen name="notification" options={{ headerShown: false }} />
         </Stack>
     );
 }

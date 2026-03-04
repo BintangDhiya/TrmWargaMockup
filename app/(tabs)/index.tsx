@@ -1,7 +1,8 @@
 import React from 'react';
+import { useRouter } from 'expo-router';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context'; // 1. Import hook ini
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const MENU_ITEMS = [
     { id: '1', title: 'Building Mgt', icon: 'office-building' },
@@ -13,22 +14,23 @@ const MENU_ITEMS = [
 ];
 
 export default function HomeScreen() {
-    // 2. Ambil nilai area aman (safe area) dari device
     const insets = useSafeAreaInsets();
+    const router = useRouter();
 
     return (
-        // Kita ubah SafeAreaView menjadi View biasa karena kita akan mengatur padding secara manual
         <View style={styles.container}>
 
             {/* --- BAGIAN HEADER ATAS --- */}
-            {/* 3. Tambahkan insets.top ke dalam paddingTop agar dinamis menyesuaikan HP */}
             <View style={[styles.header, { paddingTop: insets.top + 5 }]}>
                 <View>
                     <Text style={styles.greeting}>Halo, Penghuni!</Text>
                     <Text style={styles.subGreeting}>Semoga harimu menyenangkan</Text>
                 </View>
                 <View style={styles.headerIcons}>
-                    <TouchableOpacity style={styles.iconButton}>
+                    <TouchableOpacity
+                        style={styles.iconButton}
+                        onPress={() => router.push('/notification')}
+                    >
                         <Ionicons name="notifications-outline" size={24} color="#0F5B44" />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.iconButton}>
@@ -65,7 +67,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 20,
-        // paddingTop dihapus dari sini karena sudah dipindah ke inline style di atas
         paddingBottom: 20,
         backgroundColor: '#FFFFFF',
         borderBottomWidth: 1,
