@@ -7,6 +7,8 @@ export default function RootLayout() {
             <Stack.Screen name="index" options={{ headerShown: false }} />
             {/* Halaman Tab Navigation (Home, dll) */}
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            {/* Halaman Detail Billing */}
+            <Stack.Screen name="billing-detail" options={{ headerShown: false }} />
         </Stack>
     );
 }

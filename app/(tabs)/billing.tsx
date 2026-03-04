@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'expo-router';
 import {
     View,
     Text,
@@ -47,9 +48,28 @@ const BILLING_DATA = [
 ];
 
 export default function BillingScreen() {
+    const router = useRouter();
 
     const renderBillingCard = ({ item }: { item: typeof BILLING_DATA[0] }) => (
-        <TouchableOpacity style={styles.card} activeOpacity={0.8}>
+        <TouchableOpacity
+            style={styles.card}
+            activeOpacity={0.8}
+            onPress={() => {
+                router.push({
+                    pathname: '/billing-detail',
+                    params: {
+                        title: item.title,
+                        invoiceNo: item.invoiceNo,
+                        unit: item.unit,
+                        billedTo: item.billedTo,
+                        invoiceDate: item.invoiceDate,
+                        dueDate: item.dueDate,
+                        amount: item.amount,
+                        isPaid: item.isPaid ? 'true' : 'false', // Ubah boolean menjadi string
+                    }
+                });
+            }}
+        >
 
             {/* Bagian Atas Card: Judul dan Badge Paid */}
             <View style={styles.cardHeader}>
