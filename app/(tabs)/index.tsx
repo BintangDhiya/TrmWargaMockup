@@ -1,9 +1,8 @@
-// app/(tabs)/index.tsx
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context'; // 1. Import hook ini
 
-// Data menu untuk dirender ke dalam grid
 const MENU_ITEMS = [
     { id: '1', title: 'Building Mgt', icon: 'office-building' },
     { id: '2', title: 'Helpdesk', icon: 'tools' },
@@ -14,14 +13,19 @@ const MENU_ITEMS = [
 ];
 
 export default function HomeScreen() {
+    // 2. Ambil nilai area aman (safe area) dari device
+    const insets = useSafeAreaInsets();
+
     return (
-        <SafeAreaView style={styles.container}>
+        // Kita ubah SafeAreaView menjadi View biasa karena kita akan mengatur padding secara manual
+        <View style={styles.container}>
 
             {/* --- BAGIAN HEADER ATAS --- */}
-            <View style={styles.header}>
+            {/* 3. Tambahkan insets.top ke dalam paddingTop agar dinamis menyesuaikan HP */}
+            <View style={[styles.header, { paddingTop: insets.top + 5 }]}>
                 <View>
-                    <Text style={styles.greeting}>Halo, User!</Text>
-                    <Text style={styles.subGreeting}>Semoga harimu lancar</Text>
+                    <Text style={styles.greeting}>Halo, Penghuni!</Text>
+                    <Text style={styles.subGreeting}>Semoga harimu menyenangkan</Text>
                 </View>
                 <View style={styles.headerIcons}>
                     <TouchableOpacity style={styles.iconButton}>
@@ -47,74 +51,38 @@ export default function HomeScreen() {
                 </View>
             </ScrollView>
 
-        </SafeAreaView>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F7F5', // Latar belakang abu-abu sangat muda
+        backgroundColor: '#F5F7F5',
     },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 20,
-        paddingTop: 20,
+        // paddingTop dihapus dari sini karena sudah dipindah ke inline style di atas
         paddingBottom: 20,
         backgroundColor: '#FFFFFF',
         borderBottomWidth: 1,
         borderBottomColor: '#E0E0E0',
     },
-    greeting: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    subGreeting: {
-        fontSize: 12,
-        color: '#757575',
-        marginTop: 2,
-    },
-    headerIcons: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    iconButton: {
-        marginLeft: 15,
-    },
-    scrollContent: {
-        padding: 20,
-    },
-    gridContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-    },
-    menuItem: {
-        width: '30%', // Membagi menjadi 3 kolom
-        alignItems: 'center',
-        marginBottom: 20,
-    },
+    greeting: { fontSize: 18, fontWeight: 'bold', color: '#333' },
+    subGreeting: { fontSize: 12, color: '#757575', marginTop: 2 },
+    headerIcons: { flexDirection: 'row', alignItems: 'center' },
+    iconButton: { marginLeft: 15 },
+    scrollContent: { padding: 20 },
+    gridContainer: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' },
+    menuItem: { width: '30%', alignItems: 'center', marginBottom: 20 },
     menuIconContainer: {
-        width: 60,
-        height: 60,
-        borderRadius: 15,
-        backgroundColor: '#FFFFFF',
-        justifyContent: 'center',
-        alignItems: 'center',
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 2, // Shadow untuk Android
-        marginBottom: 8,
+        width: 60, height: 60, borderRadius: 15, backgroundColor: '#FFFFFF',
+        justifyContent: 'center', alignItems: 'center',
+        shadowColor: '#000', shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1, shadowRadius: 4, elevation: 2, marginBottom: 8,
     },
-    menuText: {
-        fontSize: 12,
-        color: '#333',
-        textAlign: 'center',
-        fontWeight: '500',
-    },
+    menuText: { fontSize: 12, color: '#333', textAlign: 'center', fontWeight: '500' },
 });
