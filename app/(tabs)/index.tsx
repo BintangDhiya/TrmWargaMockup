@@ -33,7 +33,10 @@ export default function HomeScreen() {
                     >
                         <Ionicons name="notifications-outline" size={24} color="#0F5B44" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.iconButton}>
+                    <TouchableOpacity
+                        style={styles.iconButton}
+                        onPress={() => router.push('/(tabs)/profile')}
+                    >
                         <Ionicons name="person-circle-outline" size={30} color="#0F5B44" />
                     </TouchableOpacity>
                 </View>
