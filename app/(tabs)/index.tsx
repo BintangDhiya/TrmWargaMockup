@@ -25,6 +25,9 @@ export default function HomeScreen() {
             case "Facility Rsv":
                 router.push('/facility')
                 break;
+            case "Package":
+                router.push('/package')
+                break;
             default:
                 alert(`Fitur ${itemTitle} belum tersedia.`);
         }
