@@ -18,10 +18,15 @@ export default function HomeScreen() {
     const router = useRouter();
 
     const handleMenuPress = (itemTitle: string) => {
-        if (itemTitle === 'News') {
-            router.push('/news');
-        } else {
-            alert(`Fitur ${itemTitle} belum tersedia.`);
+        switch (itemTitle) {
+            case "News":
+                router.push('/news');
+                break;
+            case "Facility Rsv":
+                router.push('/facility')
+                break;
+            default:
+                alert(`Fitur ${itemTitle} belum tersedia.`);
         }
     };
 
