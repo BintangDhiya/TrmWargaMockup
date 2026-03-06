@@ -28,6 +28,9 @@ export default function HomeScreen() {
             case "Package":
                 router.push('/package')
                 break;
+            case "Deposit":
+                router.push('/deposit')
+                break;
             default:
                 alert(`Fitur ${itemTitle} belum tersedia.`);
         }
