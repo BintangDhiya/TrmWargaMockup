@@ -17,6 +17,14 @@ export default function HomeScreen() {
     const insets = useSafeAreaInsets();
     const router = useRouter();
 
+    const handleMenuPress = (itemTitle: string) => {
+        if (itemTitle === 'News') {
+            router.push('/news');
+        } else {
+            alert(`Fitur ${itemTitle} belum tersedia.`);
+        }
+    };
+
     return (
         <View style={styles.container}>
 
@@ -46,7 +54,11 @@ export default function HomeScreen() {
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View style={styles.gridContainer}>
                     {MENU_ITEMS.map((item) => (
-                        <TouchableOpacity key={item.id} style={styles.menuItem}>
+                        <TouchableOpacity
+                            key={item.id}
+                            style={styles.menuItem}
+                            onPress={() => handleMenuPress(item.title)}
+                        >
                             <View style={styles.menuIconContainer}>
                                 <MaterialCommunityIcons name={item.icon as any} size={32} color="#0F5B44" />
                             </View>
