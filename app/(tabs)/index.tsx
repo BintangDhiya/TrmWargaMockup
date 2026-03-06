@@ -42,7 +42,7 @@ export default function HomeScreen() {
             {/* --- BAGIAN HEADER ATAS --- */}
             <View style={[styles.header, { paddingTop: insets.top + 5 }]}>
                 <View>
-                    <Text style={styles.greeting}>Halo, Penghuni!</Text>
+                    <Text style={styles.greeting}>Halo, Tsabit G!</Text>
                     <Text style={styles.subGreeting}>Semoga harimu menyenangkan</Text>
                 </View>
                 <View style={styles.headerIcons}>
