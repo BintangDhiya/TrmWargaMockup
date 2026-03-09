@@ -11,6 +11,7 @@ const MENU_ITEMS = [
     { id: '4', title: 'Package', icon: 'package-variant-closed' },
     { id: '5', title: 'Facility Rsv', icon: 'calendar-clock' },
     { id: '6', title: 'News', icon: 'newspaper' },
+    { id: '7', title: 'Shop', icon: 'storefront' },
 ];
 
 export default function HomeScreen() {
@@ -30,6 +31,9 @@ export default function HomeScreen() {
                 break;
             case "Deposit":
                 router.push('/deposit')
+                break;
+            case "Shop":
+                router.push('/shop')
                 break;
             default:
                 alert(`Fitur ${itemTitle} belum tersedia.`);
