@@ -102,7 +102,7 @@ export default function BuildingMgtScreen() {
                 </View>
 
                 {/* --- DOKUMEN & PANDUAN --- */}
-                <View style={styles.sectionCard}>
+                <View style={[styles.sectionCard, {marginTop: 0}]}>
                     <Text style={styles.sectionTitle}>Dokumen Warga</Text>
                     <View style={styles.divider} />
 
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderRadius: 12,
         marginHorizontal: 16,
-        marginTop: -20, // Menarik card ke atas gambar sedikit agar terlihat menyatu
+        marginTop: -40, // Menarik card ke atas gambar sedikit agar terlihat menyatu
         marginBottom: 16,
         padding: 16,
         borderWidth: 1,
