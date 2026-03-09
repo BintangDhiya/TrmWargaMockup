@@ -35,6 +35,9 @@ export default function HomeScreen() {
             case "Shop":
                 router.push('/shop')
                 break;
+            case "Building Mgt":
+                router.push('/building')
+                break;
             default:
                 alert(`Fitur ${itemTitle} belum tersedia.`);
         }

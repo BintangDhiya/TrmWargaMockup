@@ -15,6 +15,7 @@ export default function RootLayout() {
             <Stack.Screen name="package" options={{ headerShown: false }} />
             <Stack.Screen name="deposit" options={{ headerShown: false }} />
             <Stack.Screen name="shop" options={{ headerShown: false }} />
+            <Stack.Screen name="building" options={{ headerShown: false }} />
         </Stack>
     );
 }
