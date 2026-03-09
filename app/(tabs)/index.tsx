@@ -38,6 +38,9 @@ export default function HomeScreen() {
             case "Building Mgt":
                 router.push('/building')
                 break;
+            case "Helpdesk":
+                router.push('/(tabs)/cs')
+                break;
             default:
                 alert(`Fitur ${itemTitle} belum tersedia.`);
         }
