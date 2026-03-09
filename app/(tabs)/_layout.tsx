@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function TabLayout() {
     return (
         <Tabs screenOptions={{
-            tabBarActiveTintColor: '#0F5B44', // Warna hijau tua untuk tab aktif
+            tabBarActiveTintColor: '#0D47A1', // Warna hijau tua untuk tab aktif
             headerShown: false, // Sembunyikan header default agar kita bisa buat custom
         }}>
             <Tabs.Screen

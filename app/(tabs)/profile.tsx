@@ -48,7 +48,7 @@ export default function ProfileScreen() {
                 <Ionicons
                     name={iconName}
                     size={20}
-                    color={isDestructive ? "#D32F2F" : "#0F5B44"}
+                    color={isDestructive ? "#D32F2F" : "#0D47A1"}
                 />
             </View>
             <Text style={[styles.menuText, isDestructive ? styles.menuTextDestructive : null]}>
@@ -65,7 +65,7 @@ export default function ProfileScreen() {
             {/* Menggunakan insets.top agar aman dari notch/status bar */}
             <View style={[styles.headerSection, { paddingTop: insets.top + 20 }]}>
                 <View style={styles.avatarContainer}>
-                    <Ionicons name="person" size={60} color="#0F5B44" />
+                    <Ionicons name="person" size={60} color="#0D47A1" />
                 </View>
                 <Text style={styles.username}>Tsabit G</Text>
                 <Text style={styles.unitText}>Unit 11/J T1</Text>
@@ -111,10 +111,10 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F7F5', // Background abu-abu muda
+        backgroundColor: '#F4F7F9', // Background abu-abu muda
     },
     headerSection: {
-        backgroundColor: '#0F5B44', // Tema hijau tua
+        backgroundColor: '#0D47A1', // Tema hijau tua
         alignItems: 'center',
         paddingBottom: 30,
         borderBottomLeftRadius: 24,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 15,
         borderWidth: 3,
-        borderColor: '#5CB85C', // Aksen hijau muda di pinggir avatar
+        borderColor: '#2196F3', // Aksen hijau muda di pinggir avatar
     },
     username: {
         fontSize: 22,
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     },
     unitText: {
         fontSize: 14,
-        color: '#E8F5E9',
+        color: '#E3F2FD',
     },
     scrollContent: {
         padding: 20,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 8,
-        backgroundColor: '#F0F9F4', // Latar belakang icon hijau muda
+        backgroundColor: '#E3F2FD', // Latar belakang icon hijau muda
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 15,

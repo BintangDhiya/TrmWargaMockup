@@ -74,7 +74,7 @@ export default function BillingScreen() {
             {/* Bagian Atas Card: Judul dan Badge Paid */}
             <View style={styles.cardHeader}>
                 <View style={styles.titleContainer}>
-                    <Ionicons name="receipt-outline" size={20} color="#0F5B44" />
+                    <Ionicons name="receipt-outline" size={20} color="#0D47A1" />
                     <Text style={styles.cardTitle}>{item.title}</Text>
                 </View>
 
@@ -144,10 +144,10 @@ export default function BillingScreen() {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: '#F5F7F5',
+        backgroundColor: '#F4F7F9',
     },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         paddingVertical: 20,
         paddingHorizontal: 20,
         alignItems: 'center',
@@ -190,12 +190,12 @@ const styles = StyleSheet.create({
     cardTitle: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#0F5B44',
+        color: '#0D47A1',
         marginLeft: 8,
         flex: 1,
     },
     paidBadge: {
-        backgroundColor: '#5CB85C',
+        backgroundColor: '#2196F3',
         paddingHorizontal: 10,
         paddingVertical: 4,
         borderRadius: 6,
@@ -245,6 +245,6 @@ const styles = StyleSheet.create({
     amountText: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#0F5B44', // Menggunakan warna hijau tua untuk total agar selaras
+        color: '#0D47A1', // Menggunakan warna hijau tua untuk total agar selaras
     },
 });

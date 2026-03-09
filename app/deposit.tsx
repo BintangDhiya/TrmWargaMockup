@@ -47,7 +47,7 @@ export default function DepositScreen() {
         switch (status) {
             case 'Pending': return { bg: '#FFF3E0', text: '#E65100' }; // Oranye
             case 'Approved': return { bg: '#E3F2FD', text: '#1565C0' }; // Biru
-            case 'Refunded': return { bg: '#E8F5E9', text: '#2E7D32' }; // Hijau
+            case 'Refunded': return { bg: '#E3F2FD', text: '#2E7D32' }; // Hijau
             case 'Rejected': return { bg: '#FFEBEE', text: '#C62828' }; // Merah
             default: return { bg: '#F5F5F5', text: '#757575' }; // Abu-abu
         }
@@ -60,7 +60,7 @@ export default function DepositScreen() {
             <View style={styles.card}>
                 <View style={styles.cardHeader}>
                     <View style={styles.headerLeft}>
-                        <MaterialCommunityIcons name="cash-refund" size={24} color="#0F5B44" />
+                        <MaterialCommunityIcons name="cash-refund" size={24} color="#0D47A1" />
                         <Text style={styles.requestNo}>{item.requestNo}</Text>
                     </View>
 
@@ -115,9 +115,9 @@ export default function DepositScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F5F7F5' },
+    container: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',

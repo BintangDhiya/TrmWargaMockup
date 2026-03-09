@@ -55,7 +55,7 @@ export default function FacilityScreen() {
     const renderReservationCard = ({ item }: { item: typeof RESERVATION_DATA[0] }) => (
         <View style={styles.card}>
             <View style={styles.cardHeader}>
-                <MaterialCommunityIcons name="calendar-clock" size={20} color="#0F5B44" />
+                <MaterialCommunityIcons name="calendar-clock" size={20} color="#0D47A1" />
                 <Text style={styles.facilityName}>{item.facilityName}</Text>
 
                 {/* Badge Status */}
@@ -144,9 +144,9 @@ export default function FacilityScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F5F7F5' },
+    container: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     },
     activeTabButton: {
         borderBottomWidth: 3,
-        borderBottomColor: '#0F5B44', // Garis hijau tua penanda aktif
+        borderBottomColor: '#0D47A1', // Garis hijau tua penanda aktif
     },
     tabText: {
         fontSize: 14,
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     activeTabText: {
-        color: '#0F5B44',
+        color: '#0D47A1',
         fontWeight: 'bold',
     },
 
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
     },
     badgeProcess: { backgroundColor: '#FFF3E0' }, // Latar oranye muda
-    badgeDone: { backgroundColor: '#E8F5E9' }, // Latar hijau muda
+    badgeDone: { backgroundColor: '#E3F2FD' }, // Latar hijau muda
     statusText: { fontSize: 10, fontWeight: 'bold', color: '#555555' },
     divider: { height: 1, backgroundColor: '#E8EAE8', marginBottom: 12 },
     cardBody: {
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
         borderTopColor: '#E8EAE8',
     },
     newReservationButton: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         paddingVertical: 15,
         borderRadius: 8,
         flexDirection: 'row',

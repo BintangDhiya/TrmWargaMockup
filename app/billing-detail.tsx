@@ -34,9 +34,9 @@ export default function BillingDetailScreen() {
                         <Ionicons
                             name={isPaid ? "checkmark-circle" : "time"}
                             size={50}
-                            color={isPaid ? "#5CB85C" : "#FFA500"}
+                            color={isPaid ? "#2196F3" : "#FFA500"}
                         />
-                        <Text style={[styles.statusText, { color: isPaid ? "#5CB85C" : "#FFA500" }]}>
+                        <Text style={[styles.statusText, { color: isPaid ? "#2196F3" : "#FFA500" }]}>
                             {isPaid ? 'Lunas' : 'Belum Dibayar'}
                         </Text>
                         <Text style={styles.amountText}>{params.amount}</Text>
@@ -96,9 +96,9 @@ export default function BillingDetailScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    safeArea: { flex: 1, backgroundColor: '#F5F7F5' },
+    safeArea: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     },
     statusContainer: { alignItems: 'center', marginBottom: 20 },
     statusText: { fontSize: 16, fontWeight: 'bold', marginTop: 10, marginBottom: 5 },
-    amountText: { fontSize: 28, fontWeight: 'bold', color: '#0F5B44' },
+    amountText: { fontSize: 28, fontWeight: 'bold', color: '#0D47A1' },
     divider: { height: 1, backgroundColor: '#E8EAE8', marginBottom: 20 },
     detailContainer: { gap: 15 },
     detailRow: { flexDirection: 'row', justifyContent: 'space-between' },
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         borderTopColor: '#E8EAE8',
     },
     payButton: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         paddingVertical: 15,
         borderRadius: 8,
         alignItems: 'center',

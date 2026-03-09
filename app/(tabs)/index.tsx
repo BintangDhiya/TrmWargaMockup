@@ -50,13 +50,13 @@ export default function HomeScreen() {
                         style={styles.iconButton}
                         onPress={() => router.push('/notification')}
                     >
-                        <Ionicons name="notifications-outline" size={24} color="#0F5B44" />
+                        <Ionicons name="notifications-outline" size={24} color="#0D47A1" />
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.iconButton}
                         onPress={() => router.push('/(tabs)/profile')}
                     >
-                        <Ionicons name="person-circle-outline" size={30} color="#0F5B44" />
+                        <Ionicons name="person-circle-outline" size={30} color="#0D47A1" />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -71,7 +71,7 @@ export default function HomeScreen() {
                             onPress={() => handleMenuPress(item.title)}
                         >
                             <View style={styles.menuIconContainer}>
-                                <MaterialCommunityIcons name={item.icon as any} size={32} color="#0F5B44" />
+                                <MaterialCommunityIcons name={item.icon as any} size={32} color="#0D47A1" />
                             </View>
                             <Text style={styles.menuText}>{item.title}</Text>
                         </TouchableOpacity>
@@ -86,7 +86,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F7F5',
+        backgroundColor: '#F4F7F9',
     },
     header: {
         flexDirection: 'row',

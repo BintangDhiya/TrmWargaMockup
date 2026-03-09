@@ -59,7 +59,7 @@ export default function PackageScreen() {
                     <MaterialCommunityIcons
                         name={item.status === 'received' ? "package-variant-closed" : "package-variant"}
                         size={24}
-                        color="#0F5B44"
+                        color="#0D47A1"
                     />
                 </View>
                 <View style={styles.headerTextContainer}>
@@ -144,9 +144,9 @@ export default function PackageScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F5F7F5' },
+    container: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     },
     activeTabButton: {
         borderBottomWidth: 3,
-        borderBottomColor: '#0F5B44',
+        borderBottomColor: '#0D47A1',
     },
     tabText: {
         fontSize: 14,
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     activeTabText: {
-        color: '#0F5B44',
+        color: '#0D47A1',
         fontWeight: 'bold',
     },
 
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 8,
-        backgroundColor: '#E8F5E9',
+        backgroundColor: '#E3F2FD',
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 12,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
         color: '#757575',
     },
     confirmButton: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         paddingHorizontal: 12,
         paddingVertical: 6,
         borderRadius: 6,

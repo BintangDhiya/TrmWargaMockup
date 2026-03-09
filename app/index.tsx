@@ -35,7 +35,7 @@ export default function LoginScreen() {
 
                 <TouchableOpacity style={styles.apartmentSelector}>
                     <Text style={styles.apartmentText}>Silahkan Pilih Apartemen</Text>
-                    <MaterialIcons name="keyboard-arrow-right" size={24} color="#0F5B44" />
+                    <MaterialIcons name="keyboard-arrow-right" size={24} color="#0D47A1" />
                 </TouchableOpacity>
 
                 <View style={styles.inputContainer}>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#FFFFFF' },
     innerContainer: { flex: 1, paddingHorizontal: 24, justifyContent: 'center' },
     logoContainer: { alignItems: 'center', marginBottom: 50 },
-    logoPlaceholder: { width: 80, height: 80, borderRadius: 40, backgroundColor: '#5CB85C', justifyContent: 'center', alignItems: 'center', marginBottom: 10 },
+    logoPlaceholder: { width: 80, height: 80, borderRadius: 40, backgroundColor: '#2196F3', justifyContent: 'center', alignItems: 'center', marginBottom: 10 },
     logoText: { color: '#FFFFFF', fontSize: 40, fontWeight: 'bold' },
     appName: { fontSize: 18, color: '#757575' },
     apartmentSelector: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 15, marginBottom: 20 },
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     inputContainer: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#E0E0E0', borderRadius: 8, marginBottom: 15, paddingHorizontal: 15, backgroundColor: '#FAFAFA', height: 50 },
     input: { flex: 1, fontSize: 14, color: '#333333' },
     icon: { marginLeft: 10 },
-    loginButton: { backgroundColor: '#0F5B44', borderRadius: 8, height: 50, justifyContent: 'center', alignItems: 'center', marginTop: 10, marginBottom: 20 },
+    loginButton: { backgroundColor: '#0D47A1', borderRadius: 8, height: 50, justifyContent: 'center', alignItems: 'center', marginTop: 10, marginBottom: 20 },
     loginButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: 'bold' },
     infoBox: { flexDirection: 'row', borderWidth: 1, borderColor: '#FFA500', borderRadius: 8, padding: 15, alignItems: 'center', marginBottom: 20 },
     infoText: { flex: 1, fontSize: 10, color: '#555555', marginLeft: 10 },

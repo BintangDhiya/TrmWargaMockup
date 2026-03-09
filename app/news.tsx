@@ -49,7 +49,7 @@ export default function NewsScreen() {
 
                 <View style={styles.readMoreContainer}>
                     <Text style={styles.readMoreText}>Baca selengkapnya</Text>
-                    <Ionicons name="arrow-forward" size={12} color="#0F5B44" />
+                    <Ionicons name="arrow-forward" size={12} color="#0D47A1" />
                 </View>
             </View>
         </TouchableOpacity>
@@ -82,9 +82,9 @@ export default function NewsScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F5F7F5' },
+    container: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     },
     readMoreText: {
         fontSize: 12,
-        color: '#0F5B44',
+        color: '#0D47A1',
         fontWeight: '500',
         marginRight: 4,
     },

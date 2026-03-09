@@ -67,7 +67,7 @@ export default function NotificationScreen() {
                 <MaterialCommunityIcons
                     name={getIconName(item.type) as any}
                     size={24}
-                    color={!item.isRead ? "#FFFFFF" : "#0F5B44"}
+                    color={!item.isRead ? "#FFFFFF" : "#0D47A1"}
                 />
             </View>
 
@@ -113,9 +113,9 @@ export default function NotificationScreen() {
 
 // --- STYLING ---
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F5F7F5' },
+    container: { flex: 1, backgroundColor: '#F4F7F9' },
     header: {
-        backgroundColor: '#0F5B44',
+        backgroundColor: '#0D47A1',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -135,8 +135,8 @@ const styles = StyleSheet.create({
         borderColor: '#E8EAE8',
     },
     unreadCard: {
-        backgroundColor: '#F0F9F4',
-        borderColor: '#CDE5D8',
+        backgroundColor: '#E3F2FD',
+        borderColor: '#BBDEFB',
     },
     iconContainer: {
         width: 48,
@@ -146,12 +146,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginRight: 16,
     },
-    unreadIconBg: { backgroundColor: '#0F5B44' },
-    readIconBg: { backgroundColor: '#E8F5E9' },
+    unreadIconBg: { backgroundColor: '#0D47A1' },
+    readIconBg: { backgroundColor: '#E3F2FD' },
     textContainer: { flex: 1, justifyContent: 'center' },
     titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 },
     title: { fontSize: 14, color: '#333333', flex: 1, marginRight: 8 },
-    unreadText: { fontWeight: 'bold', color: '#0F5B44' },
+    unreadText: { fontWeight: 'bold', color: '#0D47A1' },
     unreadDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#D32F2F' },
     message: { fontSize: 12, color: '#757575', marginBottom: 6, lineHeight: 18 },
     date: { fontSize: 10, color: '#A9A9A9' },
